@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.WinForm", "Northwind.WinForm\Northwind.WinForm.csproj", "{AF97044B-0A1E-4007-963F-7CF0EB6C344B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DAFF7591-4286-4DE7-8C49-5640249FE3F9} = {DAFF7591-4286-4DE7-8C49-5640249FE3F9}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.Entity", "Northwind.Entity\Northwind.Entity.csproj", "{4BCF4719-C592-4AE5-8578-3175AB4C7ABD}"
 EndProject

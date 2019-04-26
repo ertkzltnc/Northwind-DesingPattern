@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Northwind.WinForm.ProductServiceReference;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,13 @@ namespace Northwind.WinForm
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ServiceOf_ProductDTOClient client = new ServiceOf_ProductDTOClient();
+            dataGridView1.DataSource = client.Listind();
+            
         }
     }
 }

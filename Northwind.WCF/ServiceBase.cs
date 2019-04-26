@@ -47,13 +47,13 @@ namespace Northwind.WCF
 
         public bool Adding(DTO dto)
         {
-            throw new NotImplementedException();
-                      
-         }
+            return Repository.Adding(dto.Changer<Entity>());
+
+        }
            
         public bool Deleting(DTO dto)
         {
-            throw new NotImplementedException();
+           return Repository.Deleting(dto.Changer<Entity>());
         }
 
         public List<DTO> Listind()
@@ -75,14 +75,26 @@ namespace Northwind.WCF
              * dışarıdan onu alır..
              *  Products prod: Changer method'un return tipini gösterir.
              */
-            ProductDTO d = new ProductDTO();
-            Products prod = d.Changer<Products>();
 
-            Products p = new Products();
-            ProductDTO pdto = p.Changer<ProductDTO>();
-         
-               
-            
+            // Örnek Kod:
+            //ProductDTO d = new ProductDTO();
+            //Products prod = d.Changer<Products>();
+
+            //Products p = new Products();
+            //ProductDTO pdto = p.Changer<ProductDTO>();
+            //Products p = new Products();
+            //p.ProductName = "MyAvokado";
+            //p.UnitPrice = 19;
+            //p.UnitsInStock = 199;
+            //ProductDTO dt = p.Changer<ProductDTO>();
+            return Repository.Listing().Select(x => x.Changer<DTO>()).ToList();
+            throw new NotImplementedException();
+          
+
+
+
+
+
 
 
 
@@ -92,7 +104,8 @@ namespace Northwind.WCF
 
         public bool Updating(DTO dto)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            return Repository.Updating(dto.Changer<Entity>());
         }
     }
 }
