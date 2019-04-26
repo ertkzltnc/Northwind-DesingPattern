@@ -80,9 +80,17 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Northwind.DTO\Northwind.DTO.csproj">
+      <Project>{22553c1c-da58-4706-b627-092a3a9e1131}</Project>
+      <Name>Northwind.DTO</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Northwind.Entity\Northwind.Entity.csproj">
       <Project>{4bcf4719-c592-4ae5-8578-3175ab4c7abd}</Project>
       <Name>Northwind.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Northwind.Extensions\Northwind.Extensions.csproj">
+      <Project>{ba6aecd7-2228-4a79-a9d5-cec618b63bec}</Project>
+      <Name>Northwind.Extensions</Name>
     </ProjectReference>
     <ProjectReference Include="..\Northwind.Repository\Northwind.Repository.csproj">
       <Project>{C541D1A1-067C-42FB-A4B5-ABC325B476A6}</Project>
