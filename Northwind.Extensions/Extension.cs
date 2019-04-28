@@ -45,7 +45,11 @@ namespace Northwind.Extensions
             {
                 object value=pInf.GetValue(source);
                 PropertyInfo targetpInf=targetProperties.FirstOrDefault(x => x.Name == pInf.Name);
-                targetpInf.SetValue(target,value);
+                if (targetpInf!=null)
+                {
+                    targetpInf.SetValue(target, value);
+                }
+                
             }
             return target;
 
